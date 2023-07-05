@@ -7,7 +7,7 @@ import Grow from '@mui/material/Grow';
 import Zoom from '@mui/material/Zoom';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://quickchat-i8lq.onrender.com/");
 
 
 
