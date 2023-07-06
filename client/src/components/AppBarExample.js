@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import ChatIcon from '@mui/icons-material/Chat';
 
 
-const pages = ['Source Code', 'About Me'];
+const pages = ['QuickChat','Source Code', 'About Me'];
 
 function AppBarExample() {
 
@@ -66,18 +66,27 @@ function AppBarExample() {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                
+                  <MenuItem 
+                            key={pages[0]} onClick={handleCloseNavMenu}>
+                    <Button href="https://quickchat-4shish.netlify.app/" >{pages[0]}</Button>
                   </MenuItem>
-                ))}
+                  <MenuItem 
+                            key={pages[1]} onClick={handleCloseNavMenu}>
+                    <Button href="https://github.com/Iam4shish/Realtime-Chat-App">{pages[1]}</Button>
+                  </MenuItem>
+                  <MenuItem 
+                            key={pages[2]} onClick={handleCloseNavMenu}>
+                    <Button href="https://www.linkedin.com/in/ashish-satpathy/">{pages[2]}</Button>
+                  </MenuItem>
+                
               </Menu>
             </Box>
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               
                 <Button
-                  href="https://github.com/Iam4shish/Realtime-Chat-Application"
+                  href="https://quickchat-4shish.netlify.app/"
                   key={pages[0]}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
@@ -86,12 +95,21 @@ function AppBarExample() {
                 </Button>
 
                 <Button
-                  href="https://www.linkedin.com/in/ashish-satpathy/"
+                  href="https://github.com/Iam4shish/Realtime-Chat-App"
                   key={pages[1]}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                   {pages[1]}
+                </Button>
+
+                <Button
+                  href="https://www.linkedin.com/in/ashish-satpathy/"
+                  key={pages[2]}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {pages[2]}
                 </Button>
               
 
